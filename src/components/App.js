@@ -1,15 +1,13 @@
-
-import React from "react";
+import React,{ useState } from "react";
 import './../styles/App.css';
-import ButtonCounter from "./ButtonCounter";
 
 const App = () => {
+  const [click, setCount] = useState(0);
   return (
     <div>
         {/* Do not remove the main div */}
-    <ButtonCounter>
-          
-        </ButtonCounter>
+      <p>Button clicked ${click} times</p>
+      <button onClick={() =>{ setCount(click + 1)} }>Clike me</button>
     </div>
   )
 }
